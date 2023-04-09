@@ -1,0 +1,1 @@
+export { local } from './storage'
