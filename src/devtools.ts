@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck -- StoreMutators is not compatiable TODO: fix types
 // MIT License
 
 // Copyright (c) 2019 Paul Henschel

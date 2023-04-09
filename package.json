@@ -23,6 +23,16 @@
       "require": "./dist/index.cjs",
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs"
+    },
+    "./devtools": {
+      "require": "./dist/devtools.cjs",
+      "types": "./dist/devtools.d.ts",
+      "import": "./dist/devtools.mjs"
+    },
+    "./storage": {
+      "require": "./dist/storage.cjs",
+      "types": "./dist/storage.d.ts",
+      "import": "./dist/storage.mjs"
     }
   },
   "main": "dist/index.cjs",
@@ -86,5 +96,15 @@
     "ci:snapshot": "pnpm changeset version --snapshot beta",
     "ci:prerelease": "pnpm run build && pnpm changeset publish --tag beta",
     "lint:fix": "eslint . --fix"
+  },
+  "typesVersions": {
+    "*": {
+      "devtools": [
+        "dist/devtools.d.ts"
+      ],
+      "storage": [
+        "dist/storage.d.ts"
+      ]
+    }
   }
 }

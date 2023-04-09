@@ -16,7 +16,7 @@ export default defineConfig([
   // an array for the `output` option, where we can specify
   // `file` and `format` for each target)
   {
-    input: 'src/index.ts',
+    input: ['src/index.ts', 'src/devtools.ts', 'src/storage.ts'],
     plugins: [
       /**
        * Bundle devDependencies, exclude dependencies
