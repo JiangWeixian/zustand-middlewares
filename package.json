@@ -1,6 +1,12 @@
 {
   "name": "@jiangweixian1994/zustand-middlwares",
   "version": "0.0.0",
+  "description": "zustand middlewares for webext develop",
+  "keywords": [
+    "zustand",
+    "middlewares",
+    "webext"
+  ],
   "license": "MIT",
   "packageManager": "pnpm@7.23.0",
   "homepage": "https://github.com/JiangWeixian/@jiangweixian/zustand-middlwares#readme",
@@ -95,7 +101,8 @@
     "ci:publish": "pnpm run build && pnpm changeset publish",
     "ci:snapshot": "pnpm changeset version --snapshot beta",
     "ci:prerelease": "pnpm run build && pnpm changeset publish --tag beta",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky install"
   },
   "typesVersions": {
     "*": {

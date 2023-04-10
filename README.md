@@ -2,7 +2,7 @@
 
 ## features
 
-Some useful middlewares and utils for zustand
+Some useful middlewares and utils for zustand and webext
 
 - `local & sync` storage for `webext` develop.
 - `logger` for `set` action logger.

@@ -34,6 +34,10 @@ specifiers:
 dependencies:
   functional-md: 1.1.0
 
+optionalDependencies:
+  webextension-polyfill: 0.10.0
+  zustand: 4.3.7
+
 devDependencies:
   '@aiou/eslint-config': 0.7.8_2ruvpbjjavfie6oibe5ebrxc24
   '@changesets/cli': 2.21.1
@@ -61,8 +65,6 @@ devDependencies:
   typescript: 4.4.3
   typescript-transform-paths: 3.3.1_typescript@4.4.3
   vitest: 0.10.0
-  webextension-polyfill: 0.10.0
-  zustand: 4.3.7
 
 packages:
 
@@ -5777,7 +5779,8 @@ packages:
     resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
-    dev: true
+    dev: false
+    optional: true
 
   /util-deprecate/1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
@@ -5883,7 +5886,8 @@ packages:
 
   /webextension-polyfill/0.10.0:
     resolution: {integrity: sha512-c5s35LgVa5tFaHhrZDnr3FpQpjj1BB+RXhLTYUxGqBVN460HkbM8TBtEqdXWbpTKfzwCcjAZVF7zXCYSKtcp9g==}
-    dev: true
+    dev: false
+    optional: true
 
   /which-boxed-primitive/1.0.2:
     resolution: {integrity: sha512-bwZdv0AKLpplFY2KZRX6TvyuN7ojjr7lwkg6ml0roIy9YeuSr7JS372qlNW18UQYzgYK9ziGcerWqZOmEn9VNg==}
@@ -6061,4 +6065,5 @@ packages:
         optional: true
     dependencies:
       use-sync-external-store: 1.2.0
-    dev: true
+    dev: false
+    optional: true
