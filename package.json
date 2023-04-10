@@ -26,35 +26,48 @@
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "require": "./dist/index.cjs",
       "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
       "import": "./dist/index.mjs"
     },
     "./devtools": {
-      "require": "./dist/devtools.cjs",
       "types": "./dist/devtools.d.ts",
+      "require": "./dist/devtools.cjs",
       "import": "./dist/devtools.mjs"
     },
     "./storage": {
-      "require": "./dist/storage.cjs",
       "types": "./dist/storage.d.ts",
+      "require": "./dist/storage.cjs",
       "import": "./dist/storage.mjs"
     }
   },
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "scripts": {
+    "build:lib": "rollup -c --silent",
+    "build:dts": "ttsc",
+    "build": "rimraf dist && run-p build:*",
+    "dev": "rollup -c -w --silent",
+    "test": "vitest",
+    "pretest": "pnpm run build",
+    "release": "pnpm run build && np --no-cleanup --yolo --no-publish --any-branch",
+    "ci:version": "pnpm changeset version",
+    "ci:publish": "pnpm run build && pnpm changeset publish",
+    "ci:snapshot": "pnpm changeset version --snapshot beta",
+    "ci:prerelease": "pnpm run build && pnpm changeset publish --tag beta",
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky install"
+  },
   "lint-staged": {
-    "**/**/*.{js,ts,tsx,vue,json}": [
-      "eslint --fix"
-    ]
+    "**/**/*.{js,ts,tsx,vue,json}": ["eslint --fix"]
+  },
+  "dependencies": {
+    "functional-md": "^1.1.0"
   },
   "optionalDependencies": {
     "webextension-polyfill": "^0.10.0",
     "zustand": "^4.3.7"
-  },
-  "dependencies": {
-    "functional-md": "^1.1.0"
   },
   "devDependencies": {
     "@aiou/eslint-config": "0.7.8",
@@ -89,29 +102,10 @@
   "engines": {
     "node": ">=14"
   },
-  "scripts": {
-    "build:lib": "rollup -c --silent",
-    "build:dts": "ttsc",
-    "build": "rimraf dist && run-p build:*",
-    "dev": "rollup -c -w --silent",
-    "test": "vitest",
-    "pretest": "pnpm run build",
-    "release": "pnpm run build && np --no-cleanup --yolo --no-publish --any-branch",
-    "ci:version": "pnpm changeset version",
-    "ci:publish": "pnpm run build && pnpm changeset publish",
-    "ci:snapshot": "pnpm changeset version --snapshot beta",
-    "ci:prerelease": "pnpm run build && pnpm changeset publish --tag beta",
-    "lint:fix": "eslint . --fix",
-    "prepare": "husky install"
-  },
   "typesVersions": {
     "*": {
-      "devtools": [
-        "dist/devtools.d.ts"
-      ],
-      "storage": [
-        "dist/storage.d.ts"
-      ]
+      "devtools": ["dist/devtools.d.ts"],
+      "storage": ["dist/storage.d.ts"]
     }
   }
 }
