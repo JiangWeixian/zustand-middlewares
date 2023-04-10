@@ -1,4 +1,4 @@
-# @jiangweixian/zustand-middlewares
+# @jiangweixian1994/zustand-middlewares
 
 ## features
 
@@ -10,7 +10,7 @@ Some useful middlewares and utils for zustand
 ## install
 
 ```sh
-pnpm i @jiangweixian/zustand-middlewares zustand webextension-polyfill
+pnpm i @jiangweixian1994/zustand-middlewares zustand webextension-polyfill
 ```
 
 ## usage
@@ -22,7 +22,7 @@ pnpm i @jiangweixian/zustand-middlewares zustand webextension-polyfill
 > REASON: webext with zustand, unable use devtools and redux-extensions. Use `logger` instead
 
 ```tsx
-import { logger } from '@jiangweixian/zustand-middlewares/devtools'
+import { logger } from '@jiangweixian1994/zustand-middlewares/devtools'
 
 export const useBearStore = create<BearState>()(
   logger(
@@ -57,7 +57,7 @@ Save store data into [`browsers.storage.local`](https://developer.chrome.com/doc
 > REASON: `localstorage` is only provide(5MB per domain). `browsers.storage.local` with "unlimitedStorage" permission. Consider using it to store larger amounts of data.
 
 ```tsx
-import { local } from '@jiangweixian/zustand-middlewares/storage'
+import { local } from '@jiangweixian1994/zustand-middlewares/storage'
 
 export const useBearStore = create<BearState>()(
   persist(
