@@ -37,6 +37,8 @@ export const useBearStore = create<BearState>()(
 )
 ```
 
+![logger](./sceenshots/logger.png)
+
 **'actionname'** is required for display friendly message.
 
 **display messgae format:**
