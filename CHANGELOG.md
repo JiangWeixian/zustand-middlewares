@@ -1,5 +1,11 @@
 # @jiangweixian1994/zustand-middlwares
 
+## 0.0.3
+
+### Patch Changes
+
+- a2364da: webext-polyfill and zustand to peer
+
 ## 0.0.2
 
 ### Patch Changes
