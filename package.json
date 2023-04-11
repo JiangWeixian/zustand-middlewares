@@ -9,13 +9,13 @@
   ],
   "license": "MIT",
   "packageManager": "pnpm@7.23.0",
-  "homepage": "https://github.com/JiangWeixian/@jiangweixian/zustand-middlwares#readme",
+  "homepage": "https://github.com/JiangWeixian/zustand-middlwares#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JiangWeixian/@jiangweixian/zustand-middlwares.git"
+    "url": "git+https://github.com/JiangWeixian/zustand-middlwares.git"
   },
   "bugs": {
-    "url": "https://github.com/JiangWeixian/@jiangweixian/zustand-middlwares/issues",
+    "url": "https://github.com/JiangWeixian/zustand-middlwares/issues",
     "email": "jiangweixian1994@gmail.com"
   },
   "author": {

@@ -37,7 +37,7 @@ export const useBearStore = create<BearState>()(
 )
 ```
 
-![logger](./sceenshots/logger.png)
+![logger](https://raw.githubusercontent.com/JiangWeixian/zustand-middlewares/main/sceenshots/logger.png?token=GHSAT0AAAAAAB2WKQN6AD5HCUBY5ZDCABQUZBVN3KQ)
 
 **'actionname'** is required for display friendly message.
 
