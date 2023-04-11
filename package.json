@@ -1,6 +1,6 @@
 {
   "name": "@jiangweixian1994/zustand-middlwares",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "zustand middlewares for webext develop",
   "keywords": [
     "zustand",
