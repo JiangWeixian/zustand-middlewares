@@ -64,12 +64,17 @@
   "lint-staged": {
     "**/**/*.{js,ts,tsx,vue,json}": ["eslint --fix"]
   },
+  "peerDependencies": {
+    "webextension-polyfill": "^0.10.0",
+    "zustand": "^4"
+  },
+  "peerDependenciesMeta": {
+    "webextension-polyfill": {
+      "optional": true
+    }
+  },
   "dependencies": {
     "functional-md": "^1.1.0"
-  },
-  "optionalDependencies": {
-    "webextension-polyfill": "^0.10.0",
-    "zustand": "^4.3.7"
   },
   "devDependencies": {
     "@aiou/eslint-config": "0.7.8",
